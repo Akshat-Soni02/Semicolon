@@ -3,7 +3,7 @@ import Navbar from '../../Components/Navbar/Navbar.jsx'
 import CreatePostHome from '../../Components/createPostHome/CreatePostHome.jsx'
 
 import "./style.css"
-import Post from '../../Components/post/Post.jsx'
+import Post from '../../Components/postPage/Post.jsx'
 
 const Home = () => {
   return (
