@@ -10,6 +10,7 @@ import contPo from "./Pages/contentPolicy/contPo.jsx"
 import Mod from "./Pages/ModeratorCodeOfConduct/Mod.jsx"
 import PrivPol from "./Pages/privacyPolicy/PrivPol.jsx"
 import UserAgg from "./Pages/UserAgreement/UserAgg.jsx"
+import ProfilePage from "./Pages/profilePage/ProfilePage.jsx"
 
 function App() {
   return (
@@ -18,13 +19,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/postCard" element={<PostCard />} />
-          <Route path="auth" element={<LoginSignUp />} />
-          <Route path="post" element={<Post />} />
-          <Route path="store" element={<Store />} />
+          <Route path="/auth" element={<LoginSignUp />} />
+          <Route path="/post" element={<Post/>} />
+          <Route path="/store" element={<Store />} />
           <Route path='/stars/codeOfConduct' element = {<Mod/>} />
           <Route path='/ContentPolicy' element = {<contPo/>} />
           <Route path='/PrivacyPolicy' element = {<PrivPol/>} />
           <Route path='/UserAgreement' element = {<UserAgg/>} />
+          <Route path='/Profile' element = {<ProfilePage/>} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,19 +1,41 @@
 import React from 'react'
 import img from "../../assets/test.png"
-import { BsLightning } from "react-icons/bs";
-import { BsLightningFill } from "react-icons/bs";
 import { VscComment } from "react-icons/vsc";
 import { BsDot } from "react-icons/bs";
+import { BiSolidLike } from "react-icons/bi";
+import { BiSolidDislike } from "react-icons/bi";
+import { BiLike } from "react-icons/bi";
+import { BiDislike } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 import "./style.css"
 import { useState } from 'react';
 
 const Post = () => {
     const [isLiked, setisLiked] = useState(false);
+    const [isDisliked, setisDisliked] = useState(false);
+    const navigate = useNavigate();
+
 
     const likePost = () => {
         setisLiked(!isLiked);
     }
+
+    const DislikePost = () => {
+        setisDisliked(!isDisliked);
+    }
+
+    // const navToCommunity = () => {
+    //     navigate(`/community/${communityName}`);
+    // }
+
+    // const navTOUser = () => {
+    //     navigate(`/user/${userName}`);
+    // }
+
+    // const navToPostDetails = () => {
+    //     navigate(`/post/${postName}`);
+    // }
 
   return (
     <div className='post'>
@@ -38,9 +60,14 @@ const Post = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium totam magni sit id obcaecati minus ut reprehenderit odio quaerat, optio aperiam illo, veritatis dolorum voluptatibus nesciunt commodi maiores, dolor magnam.
             </p>
         </div>
-        <div className="postFunctions" onClick={likePost}>
-            {isLiked ? (<BsLightningFill/>) : (<BsLightning/>)}
-            <VscComment/>
+        <div className="postFunctions" >
+            <div className="postLike" onClick={likePost}>
+                {isLiked ? (<BiSolidLike/>) : (<BiLike/>)}
+            </div>
+            <div className="postDislike" onClick={DislikePost}>
+                {isDisliked ? (<BiSolidDislike/>) : (<BiDislike/>)}
+            </div>
+            <VscComment className='postDislike'/>
         </div>
     </div>
   )

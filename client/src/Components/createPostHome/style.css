@@ -39,3 +39,8 @@
     color: white;
     font-size: 1.5rem;
 }
+
+.homeIcons:hover{
+    color: rgb(212, 211, 211);
+    cursor: pointer;
+}

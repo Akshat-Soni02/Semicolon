@@ -50,7 +50,18 @@
 }
 
 .postFunctions{
+    margin-top: 1rem;
     display: flex;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     gap: 1rem;
+    align-items: center;
+}
+
+.postLike, .postDislike{
+    display: flex;
+    align-items: center;
+}
+
+.postLike:hover, .postDislike:hover{
+    cursor: pointer;
 }
