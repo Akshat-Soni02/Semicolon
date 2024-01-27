@@ -1,5 +1,6 @@
 import app from "./app.js";
 import dotenv from "dotenv";
+import cloudinary from "cloudinary";
 import connectDatabase from "./config/db.js";
 import http from "http";
 
@@ -14,6 +15,12 @@ dotenv.config();
 
 // Connect to database
 connectDatabase();
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 const server = http.createServer(app);
 

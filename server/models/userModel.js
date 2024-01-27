@@ -10,7 +10,7 @@ const Userschema = new Schema({
   username: {
     type: String,
     required: [true, "Please enter your name"],
-    unique: true
+    unique: true,
   },
   email: {
     type: String,
@@ -31,9 +31,28 @@ const Userschema = new Schema({
     type: Date,
   },
   otp: Number,
-  profile: {
-    type : String,
-  },
+  // avatar: {
+  //   public_id: {
+  //     type: String,
+  //     required: true,
+  //   },
+  //   url: {
+  //     type: String,
+  //     required: true,
+  //   },
+  // },
+  communities: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Community",
+    },
+  ],
+  posts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Post",
+    },
+  ],
 });
 
 Userschema.pre("save", async function (next) {
