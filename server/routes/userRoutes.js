@@ -7,8 +7,6 @@ import {
   verifyotp,
   resetPassword,
   getUserDetails,
-  getCount,
-  addAdmin,
 } from "../controller/userController.js"; // Use the .mjs file extension for ESM
 import { isAuthenticatedUser } from "../middleware/auth.js"; // Use the .mjs file extension for ESM
 
@@ -22,7 +20,5 @@ router.route("/sendotp").post(forgotpassword);
 router.route("/verifyotp").post(verifyotp);
 router.route("/resetpassword/:token").post(resetPassword);
 router.route("/me").get(isAuthenticatedUser, getUserDetails);
-router.route("/getcount").get(getCount);
-// router.route("/add").post(addAdmin);
 
 export default router;

@@ -3,12 +3,12 @@ import express from "express";
 import errrMiddleware from "./middleware/error.js"; // Make sure to use the .mjs file extension for ESM
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import fileUpload from "express-fileupload";
 import { fileURLToPath } from "url";
 import path from "path";
 
 // Create an Express application
 const app = express();
-
 
 app.use(
   cors({
@@ -19,7 +19,15 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
+app.use(fileUpload());
 
+// Import routes
+import userRoutes from "./routes/userRoutes.js";
+import communityRoutes from "./routes/communityRoutes.js";
+
+// Use routes
+app.use("/api/v1", userRoutes);
+app.use("/api/v1", communityRoutes);
 
 // Error Middleware
 app.use(errrMiddleware);
