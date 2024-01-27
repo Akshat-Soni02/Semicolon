@@ -1,0 +1,27 @@
+.Home{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    height: 100vh;
+}
+
+.HomeNav{
+    position: sticky;
+    top: 0;
+}
+
+.homeFeed{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 700px;
+}
+
+.feed{
+    padding-left: 19rem;
+    display: flex;
+    gap: 2rem;
+    flex-grow: 1;
+}
