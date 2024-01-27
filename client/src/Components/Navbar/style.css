@@ -1,0 +1,128 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1A1A1A;
+    padding: 0 4rem 0 4rem;
+    height: 75px;
+}
+
+.logo_img_sb{
+    width: 14rem;
+    height: auto;
+}
+
+.navLeft{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.searchBar{
+    display: flex;
+    align-items: center;
+}
+
+.navSearchIcon{
+    position: relative;
+}
+
+.searchBarLabel{
+    display: none;
+}
+
+.searchBarInput{
+    outline: none;
+    border: none;
+    background-color: #3730305c;
+    /* border: 0.3px solid rgba(255, 255, 255, 0.615); */
+    border-radius: 7px;
+    font-size: 1.1rem;
+    padding: 0.4rem;
+    color: white;
+    /* width: 100px; */
+}
+
+::placeholder {
+    padding: 0.03rem;
+    font-size: 1rem;
+}
+
+.hashInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: rgb(164, 162, 162);
+}
+
+.hashesInNav{
+    font-size: 0.8rem;
+}
+
+.hash{
+    color: red;
+}
+
+.projectMainName{
+    font-size: 1.9rem;
+    color: white;
+    font-weight: 500;
+}
+
+.navRight{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navProfile{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 3px;
+    border-radius: 15px;
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+.nav-user-data{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-user-name{
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+}
+
+.userAva{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center
+}
+
+.navIcons{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+.navIcon{
+    padding: 0.3rem;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.navIcon:hover{
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+}
+
+.downIcon {
+    font-size: 1.1rem;
+    color: white;
+}
+
