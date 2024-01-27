@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Titillium+Web&display=swap');
+
+.cart{
+    /* background-color: #1A1A1A; */
+    padding: 1rem;
+    background-image: url(../../assets/cart.png);
+    border: 1px solid #1A1A1A;
+    background-size: cover;
+}
+
+.shopNav{
+    background-color: #1A1A1A;
+    color: rgb(241, 210, 85);
+    border-radius: 5px;
+    text-align: center;
+    /* border: 0.3px solid rgb(135, 116, 5); */
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.shopNav:hover{
+    background-image: linear-gradient(rgb(241, 210, 85), rgb(238, 206, 76),rgb(243, 199, 25));
+    color: #1A1A1A;
+    cursor: pointer;
+}

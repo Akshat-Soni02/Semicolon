@@ -6,6 +6,7 @@
     flex-direction: column;
     padding: 1rem;
     font-family: 'Titillium Web', sans-serif;    /* align-items: start; */
+    margin-bottom: 1rem;
 }
 
 .postInfo{

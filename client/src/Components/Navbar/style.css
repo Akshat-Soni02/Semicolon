@@ -4,6 +4,7 @@
     background-color: #1A1A1A;
     padding: 0 4rem 0 4rem;
     height: 75px;
+    width: 100%;
 }
 
 .logo_img_sb{
@@ -111,7 +112,7 @@
 
 .navIcon{
     padding: 0.3rem;
-    font-size: 1.3rem;
+    font-size: 1.9rem;
     color: white;
 }
 

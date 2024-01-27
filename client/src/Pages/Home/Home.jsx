@@ -4,6 +4,8 @@ import CreatePostHome from '../../Components/createPostHome/CreatePostHome.jsx'
 
 import "./style.css"
 import Post from '../../Components/postPage/Post.jsx'
+import Shop from "../../Components/shop/Shop.jsx"
+import Footer from '../../Components/Footer/Footer.jsx'
 
 const Home = () => {
   return (
@@ -17,6 +19,8 @@ const Home = () => {
                 <Post/>
             </div>
             <div className="homeRightFeed">
+              <Shop/>
+              <Footer/>
             </div>
         </div>
     </section>

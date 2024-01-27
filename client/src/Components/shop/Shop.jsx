@@ -7,6 +7,9 @@ const Shop = () => {
   return (
     <div className='cart'>
         <img src={img} alt="Shop"/>
+        <p className="shopNav">
+          Go to Shop
+        </p>
     </div>
   )
 }

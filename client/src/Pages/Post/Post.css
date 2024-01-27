@@ -30,13 +30,13 @@ main{
     border-right: 1px solid rgb(238, 231, 231);
 }
 
-.icons{
+/* .icons{
     height: 2rem;
     width: 2rem;
-}
+} */
 
 .ft-1{
-    /* padding: 2rem; */
+    padding: 2rem;
     font-size: 2rem;
 }
 
