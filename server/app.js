@@ -24,10 +24,14 @@ app.use(fileUpload());
 // Import routes
 import userRoutes from "./routes/userRoutes.js";
 import communityRoutes from "./routes/communityRoutes.js";
+import postRoutes from "./routes/postRoutes.js";
+import commentRoutes from "./routes/commentRoutes.js";
 
 // Use routes
 app.use("/api/v1", userRoutes);
 app.use("/api/v1", communityRoutes);
+app.use("/api/v1/post", postRoutes);
+app.use("/api/v1", commentRoutes);
 
 // Error Middleware
 app.use(errrMiddleware);

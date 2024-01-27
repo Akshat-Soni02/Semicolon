@@ -53,6 +53,10 @@ const PostSchema = new Schema({
       ref: "User",
     },
   ],
+  isDeleted: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 export default model("Post", PostSchema);
