@@ -1,4 +1,4 @@
-main {
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,6 +12,7 @@ main {
   padding: 2rem;
   padding-top: 0;
   border: 1px solid black;
+    border-radius: 1rem;
 }
 
 .container {
@@ -30,13 +31,13 @@ main {
   border-right: 1px solid rgb(238, 231, 231);
 }
 
-.icons {
+/* .icons {
   height: 2rem;
   width: 2rem;
-}
+} */
 
 .ft-1 {
-  /* padding: 2rem; */
+  padding: 2rem;
   font-size: 2rem;
 }
 

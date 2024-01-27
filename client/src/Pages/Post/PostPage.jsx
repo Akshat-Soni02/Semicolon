@@ -8,7 +8,7 @@ import "./Post.css";
 
 export default function Post() {
   return (
-    <main>
+    <main className="main">
       <h3 className="header">Create a Post</h3>
       <div className="content">
         <div className="container borderBottom">
