@@ -34,6 +34,15 @@ const CommentSchema = new Schema({
       ref: "User",
     },
   ],
+  post: {
+    type: Schema.Types.ObjectId,
+    ref: "Post",
+    required: true,
+  },
+  isDeleted: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 export default model("Comment", CommentSchema);
