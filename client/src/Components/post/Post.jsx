@@ -1,49 +1,59 @@
-import React from 'react'
-import img from "../../assets/test.png"
-import { BsLightning } from "react-icons/bs";
-import { BsLightningFill } from "react-icons/bs";
-import { VscComment } from "react-icons/vsc";
-import { BsDot } from "react-icons/bs";
+import React from "react";
+import { IoImages } from "react-icons/io5";
+import { FaPoll } from "react-icons/fa";
+import Button from "@mui/material/Button";
+import { BsPostcardHeartFill } from "react-icons/bs";
 
-import "./style.css"
-import { useState } from 'react';
+import "./Post.css";
 
-const Post = () => {
-    const [isLiked, setisLiked] = useState(false);
-
-    const likePost = () => {
-        setisLiked(!isLiked);
-    }
-
+export default function Post() {
   return (
-    <div className='post'>
-        <div className="postInfo">
-            <div className="postInfoCom">
-                <img className='userAva' src={img} alt=''/>
-                <span className="postCommunity">fakeCommunity</span>
-            </div>
-            <span className="postUser">
-                <BsDot/> 
-                Posted by fake_man
-            </span>
+    <main>
+      <h3 className="header">Create a Post</h3>
+      <div className="content">
+        <div className="container borderBottom">
+          <span className="borderRight ft-1">
+            <BsPostcardHeartFill className="icons" />
+            <span>Post</span>
+          </span>
+          <span className="borderRight ft-1">
+            <IoImages className="icons" />
+            <span>Media</span>
+          </span>
+          <span className="ft-1">
+            <FaPoll className="icons" />
+            <span>Post</span>
+          </span>
         </div>
-        <div className="postContent">
-            <span className="postTitle">
-                This is a Fake Post Title
-            </span>
-            <div className="postImgDiv">
-                <img className='postImg' src={img} alt=''/>
-            </div>
-            <p className="postText">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium totam magni sit id obcaecati minus ut reprehenderit odio quaerat, optio aperiam illo, veritatis dolorum voluptatibus nesciunt commodi maiores, dolor magnam.
-            </p>
-        </div>
-        <div className="postFunctions" onClick={likePost}>
-            {isLiked ? (<BsLightningFill/>) : (<BsLightning/>)}
-            <VscComment/>
-        </div>
-    </div>
-  )
-}
 
-export default Post
+        <form className="form">
+          <div className="title">
+            <label>
+              <input type="text" placeholder="Suggest a title for your post" />
+            </label>
+          </div>
+          <div className="description ">
+            <textarea
+                name="postContent"
+                placeholder="Write something"
+                rows={4}
+                cols={100}
+           />
+          </div>
+          <div className="images-videos">
+            <label>
+              Media
+              <input
+                type="file"
+                accept="image/png, image/jpeg, image/jpg, video/mp4"
+              />
+            </label>
+          </div>
+          <div>
+            <Button className="btn" variant="contained">Post</Button>
+          </div>
+        </form>
+      </div>
+    </main>
+  );
+}
