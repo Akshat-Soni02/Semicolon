@@ -53,6 +53,30 @@ const Userschema = new Schema({
       ref: "Post",
     },
   ],
+  comments: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Comment",
+    },
+  ],
+  joinedAt: {
+    type: Date,
+    default: Date.now,
+  },
+  points: {
+    type: Number,
+    default: 0,
+  },
+  title: {
+    type: String,
+    default: "Stranger",
+  },
+  ownedTitles: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Title",
+    },
+  ],
 });
 
 Userschema.pre("save", async function (next) {
