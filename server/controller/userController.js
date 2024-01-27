@@ -15,7 +15,9 @@ export const registerUser = catchAsyncErrors(async (req, res, next) => {
   //   crop: "scale",
   // });
 
-  const all = await Community.findById("65b4e3f93ca291f3d6451857");
+  const all = await Community.findOne({
+    name: "all",
+  });
 
   // console.log(all);
 
@@ -31,9 +33,10 @@ export const registerUser = catchAsyncErrors(async (req, res, next) => {
     // },
   });
 
-  all.members.push(user._id);
-  all.save();
-
+  if (all) {
+    all.members.push(user._id);
+    all.save();
+  }
   sendToken(user, 201, res);
 });
 
@@ -171,6 +174,18 @@ export const resetPassword = catchAsyncErrors(async (req, res, next) => {
 // Get currently logged-in user details => /api/v1/me
 export const getUserDetails = catchAsyncErrors(async (req, res, next) => {
   const user = await User.findById(req.user.id);
+  res.status(200).json({
+    success: true,
+    user,
+  });
+});
+
+//change title of user => /api/v1/me/title
+export const changeTitle = catchAsyncErrors(async (req, res, next) => {
+  const user = await User.findById(req.user.id);
+  const title = req.body.title;
+  user.title = title;
+  await user.save();
   res.status(200).json({
     success: true,
     user,
