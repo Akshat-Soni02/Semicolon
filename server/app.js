@@ -9,6 +9,7 @@ import path from "path";
 // Create an Express application
 const app = express();
 
+
 app.use(
   cors({
     credentials: true,
