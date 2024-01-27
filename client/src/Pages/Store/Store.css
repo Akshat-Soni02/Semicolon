@@ -1,0 +1,38 @@
+ .container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+ }
+
+ .part1{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 60%;
+    border: 1px solid rgb(217, 163, 163);
+    border-radius: 4px;
+ }
+
+ .part2{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    gap: 1rem;
+    flex-wrap: wrap;
+    border: 1px solid rgb(217, 163, 163);
+    border-radius: 4px;
+ }
+
+ .item1{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .badge{
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 10%;
+ }
+
