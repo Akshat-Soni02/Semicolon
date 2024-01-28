@@ -1,4 +1,5 @@
 # Online Judge Application - Gamified Learning Platform
+(Note: We have changed our idea earlier from an Social media platform similar to Reddit and Discord to this online judge application. The most of commits on this repository were from earlier idea only. As we were not able to add the features we thought so we decided to change the idea and implemented this one.)
 
 ## Overview
 
