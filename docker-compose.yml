@@ -1,0 +1,18 @@
+version: '3'
+services:
+  frontend:
+    image: frontend-image
+    ports:
+      - 3000:3000
+    networks:
+      - my_network
+
+  backend:
+    image: backend-image
+    ports:
+      - 4000:4000
+    networks:
+      - my_network
+
+networks:
+  my_network:
